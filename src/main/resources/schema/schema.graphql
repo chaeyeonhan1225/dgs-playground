@@ -1,0 +1,17 @@
+type User {
+    id: ID!
+    nickname: String!
+}
+
+type Query {
+    users: [User!]!
+    user(id: ID!): User!
+}
+
+input UserParam {
+    nickname: String!
+}
+
+type Mutation {
+    createUser(param: UserParam!): User!
+}
